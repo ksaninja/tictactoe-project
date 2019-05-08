@@ -36,6 +36,12 @@ width:100%; height:100%; overflow:hidden; margin:0;
     border-block-end-color: blue;
     border-bottom: 0px;
     border: 8px;
+    font-size: 80%;
+    text-align: center;
+    justify-items: space-around;
+    align-content: center;
+    align-self: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
 }
 .gr {
@@ -46,7 +52,14 @@ width:100%; height:100%; overflow:hidden; margin:0;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
   }
-
+ .db{
+  border-left: 2px solid rgb(78, 2, 2);
+  border-right: 2px solid rgb(78, 2, 2);
+ }
+ .thedb{
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+ }
   .rttable {
     transform:rotate(-370deg);
     margin-top: -40px;
@@ -54,8 +67,23 @@ width:100%; height:100%; overflow:hidden; margin:0;
   #tableps{
     padding-left: 160px;
   }
+.flxdiv {
+  display: grid;
+  grid-template-rows: 100px 100px 100px;
+  grid-template-columns: 100px 100px 100px;
+  margin: 0px;
+  margin-bottom: 5px;
+  margin-top: 55px;
+  margin-right: 5px;
+  padding: 5px;
+  position: absolute;
+  box-sizing: border-box;
+}
 
-
+.thesq {
+  width: 100px;
+	height: 100px;
+}
 
   
 @import url(https://fonts.googleapis.com/css?family=Lato:900);
