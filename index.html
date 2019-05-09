@@ -33,7 +33,7 @@
     <embed name="Epic Japanese Music - Shadow Ninja" src="../media/ninja.mp3" loop="false" hidden="true" autostart="true">
     <div class="parcon">
 <div class="rttable" id="tableps">
-    <table> 
+   <!-- <table> 
 <tr>
 <td class="box" id="0"></td>
 <td class="box gr" id="1"></td>
@@ -54,16 +54,33 @@
 <td class="box" id="8"></td>
         
 </tr>
-</table>
+</table>-->
+       <div class="flxdiv">
+<div class="box thesq" id="0"></div>
+<div class="box db thesq" id="1"></div>
+<div class="box thesq" id="2"></div>
+<div class="box thedb thesq" id="3"></div>
+<div class="box db thedb thesq" id="4"></div>
+<div class="box thedb thesq" id="5"></div>
+<div class="box thesq" id="6"></div>
+<div class="box db thesq" id="7"></div>
+<div class="box thesq" id="8"></div>
+</div>
+
+
+
+
+
 </div>
 <div class="flexing">
 <button href="#" onmousedown="swoosh.play()" onmouseup="sweesh.play()" class="buttons" id="bt0">
-   About This Game
+   This Game
 </button>
-<button href="#" onmousedown="sweesh.play()" onmouseup="sweesh.play()" class="buttons" id="bt1" onClick="start()">Start</button>
-<button href="#" onmousedown="swoosh.play()" onmouseup="swoosh.play()" class="buttons"id="bt2">dqwdw</button>
-<button href="#" onmousedown="sweesh.play()" onmouseup="sweesh.play()" class="buttons"id="bt3">dqwdw</button>
-<button href="#" onmousedown="swoosh.play()" onmouseup="swoosh.play()" class="buttons"id="bt4">dqwdw</button>
+<button href="#" onmousedown="sweesh.play()" onmouseup="sweesh.play()" class="buttons" id="bt1" onClick="start()">reset</button>
+<button href="#" onmousedown="swoosh.play()" onmouseup="swoosh.play()" class="buttons"id="bt2">Skin</button>
+<button href="#" onmousedown="sweesh.play()" onmouseup="sweesh.play()" class="buttons"id="bt3">Record</button>
+<button href="#" onmousedown="swoosh.play()" onmouseup="swoosh.play()" class="buttons"id="bt4">Subscribe</button>
+<button href="#" onmousedown="sweesh.play()" onmouseup="sweesh.play()" class="buttons"id="bt5" style="color:darkcyan; font-weight:bolder">ADVICE</button>
 </div>
   <div class="end">
       <div class="text"></div>
@@ -74,7 +91,7 @@
     <audio id="player" autoplay controls><source src="ninja.mp3" type="audio/mp3"></audio>
   
 <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
-
+<script src="js/main.js"></script>
 <!--<script src=“https://unpkg.com/sweetalert/dist/sweetalert.min.js“></script>-->
 </body>
 </html>
