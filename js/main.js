@@ -7,8 +7,8 @@ sweesh.src = "sweesh.mp3";
 
 
 //Declartion the variables
-let playerOne = "NINJA";
-let playerTwo = "SAMURAI";
+let playerOne = "X";
+let playerTwo = "O";
 let counter = 1;
 
 //SA => 1,3,5
@@ -83,7 +83,16 @@ const samuraiplayer = false;
 // function AddText() {
 //   console.log('Added');
 // };
+let currentGame = {
+  gameDone : false,
+  currentPlayer:"",
+};
 
+function txtpop () {
+// document.querySelector(".end").style.display ="block";
+// document.querySelector(".end .text").innerText=txtpop;
+
+}
 function winning(){
 
   const box1=document.getElementById("0").innerText;
@@ -95,10 +104,6 @@ function winning(){
   const box7=document.getElementById("6").innerText;
   const box8=document.getElementById("7").innerText;
   const box9=document.getElementById("8").innerText;
-  let currentGame = {
-    gameDone : false,
-    currentPlayer:""
-  };
   if(box1 !== "" && box1 === box2 && box1 === box3)
   {
     currentGame.gameDone = true;
@@ -124,7 +129,7 @@ else if(box3 !=="" && box3 === box5 && box3 === box7)
   currentGame.gameDone = true;
   currentGame.currentPlayer = box3;
 }
-else if(box3 !=="" && box3 === box6 && box1 === box9)
+else if(box3 !=="" && box3 === box6 && box3 === box9)
 {
   currentGame.gameDone = true;
   currentGame.currentPlayer = box3;
@@ -144,16 +149,24 @@ if(currentGame.gameDone === true){
   setTimeout(function(){
     alert ("youuuu won " + currentGame.currentPlayer);
   },500);
-
+  console.log("hudsaf")
   $(".box").off("click");
 
 }
+if (counter === 10 && currentGame.gameDone===false){
+  alert (" TIE GAME .... Try again ^^ ");
+  txtpop(winning.player == playerOne ? "Tie Game" : "You won");
+}
 }
 
-$("#bt1").on("click",function(){
+//$("#bt1").on("click")
+
+const start = function(){
   $(".box").text("");
-  $(".box").on("click",winning());
-})
+  counter=1;
+  currentGame.gameDone = false;
+  $(".box").on("click",theboard);
+}
 
 
 // const bxs=document.querySelectorAll("#flxdiv"), N_or_S=0;
@@ -165,7 +178,10 @@ $("#bt1").on("click",function(){
 
 
 
-$(".box").on("click",function(event){
+
+
+
+const theboard =function(event){
   if ( counter % 2 === 0 ){
     $(event.target).text(playerTwo)
   }
@@ -173,10 +189,48 @@ $(".box").on("click",function(event){
 $(event.target).text(playerOne)
 
   }
-  console.log(counter);
   counter++;
+  console.log(counter);
   
   $(event.target).off("click")
   winning();
-});
+};
 
+$(".box").on("click",theboard);
+
+$("#bt0").click(function(){
+  $(".end").css("display","block").text("A simple TicTieToe Game, Ninja Theme... hope u enjoy it ^^.. " );
+
+})
+
+
+
+$("#bt0").on("mouseleave",function(){
+  $(".end").css("display","none")
+
+})
+
+$("#bt1").click(function(){
+  $(".strt").css("display","block")
+
+})
+
+
+
+$("#bt1").on("mouseleave",function(){
+  $(".strt").css("display","none")
+
+})
+
+
+$("#bt5").click(function(){
+ 
+  $(".end").css("display","block").text("It's All About the journey  ...     NOT the Destination .." );
+})
+
+
+
+$("#bt5").on("mouseleave",function(){
+  $(".end").css("display","none")
+
+})
